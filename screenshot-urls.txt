@@ -1,0 +1,44 @@
+Landing Page
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494342411-01-landing-page.png
+
+For Employers
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494347655-02-for-employers.png
+
+Solutions
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494351646-03-solutions.png
+
+Login Page
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494356559-04-login.png
+
+Register Page
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494361976-05-register.png
+
+Patient Dashboard
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494372251-06-patient-dashboard.png
+
+Patient Appointments
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494378010-07-patient-appointments.png
+
+Health Tracker
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494383041-08-patient-tracker.png
+
+Secure Messages
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494388635-09-patient-messages.png
+
+Provider Dashboard
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494399236-10-provider-dashboard.png
+
+Patient List
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494403786-11-provider-patients.png
+
+Prescriptions
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494408211-12-provider-prescriptions.png
+
+Care Plans
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494412471-13-provider-care-plans.png
+
+Employer Analytics
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494422981-14-employer-dashboard.png
+
+Employer Billing
+https://seasdqvcaexqgrbvngfz.supabase.co/storage/v1/object/public/screenshots/screenshots/1773494427856-15-employer-billing.png

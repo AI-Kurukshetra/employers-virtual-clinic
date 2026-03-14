@@ -49,11 +49,12 @@ test('Full demo journey', async ({ page }) => {
   await page.goto('/login', { waitUntil: 'networkidle' })
   await expect(page.getByLabel('Email')).toBeVisible()
   await narrate(page, 'Patient experience — secure login', 2500)
-  await page.getByLabel('Email').fill('emma.johnson@gmail.com')
-  await page.getByLabel('Password').fill('password123')
-  await page.getByRole('button', { name: /^sign in$/i }).click()
-  await expect(page).toHaveURL(/\/patient\/dashboard/)
-  await expect(page.getByRole('heading', { name: /dashboard/i })).toBeVisible()
+  await loginAs(
+    'emma.johnson@gmail.com',
+    'password123',
+    /\/patient\/dashboard/,
+    /dashboard/i
+  )
 
   await narrate(page,
     'Personalized patient dashboard with health insights',

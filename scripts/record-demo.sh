@@ -26,7 +26,19 @@ if ! curl -sSf http://localhost:3000 >/dev/null 2>&1; then
 fi
 
 echo "Seeding demo users..."
-node scripts/seed-demo-users.js
+seed_ok=0
+for i in {1..10}; do
+  if node scripts/seed-demo-users.js; then
+    seed_ok=1
+    break
+  fi
+  echo "Seed attempt $i failed, retrying..."
+  sleep 5
+done
+
+if [ "$seed_ok" -ne 1 ]; then
+  echo "Seeding failed after retries. Continuing with existing data."
+fi
 
 echo "Recording full demo journey..."
 npx playwright test e2e/demo-05-full-journey.spec.ts \
