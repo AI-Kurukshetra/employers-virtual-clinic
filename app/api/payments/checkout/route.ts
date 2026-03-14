@@ -5,9 +5,11 @@ import { paymentCheckoutSchema } from "@/lib/validations";
 import { jsonError, jsonOk } from "@/lib/utils";
 import { requireSession } from "@/lib/api-auth";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
-  apiVersion: "2026-02-25.clover",
-});
+function getStripeClient() {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) return null;
+  return new Stripe(key, { apiVersion: "2026-02-25.clover" });
+}
 
 const basePriceByType: Record<string, number> = {
   VIDEO: 120,
@@ -24,6 +26,9 @@ const specialtyMultiplier: Record<string, number> = {
 
 export async function POST(req: NextRequest) {
   try {
+    const stripe = getStripeClient();
+    if (!stripe) return jsonError("Payments are not configured", 500, { missing: "STRIPE_SECRET_KEY" });
+
     const { error, session } = await requireSession(["PATIENT", "EMPLOYER_ADMIN"]);
     if (error || !session) return error;
 

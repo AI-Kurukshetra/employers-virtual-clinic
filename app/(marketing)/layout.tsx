@@ -1,16 +1,15 @@
 import AnnouncementBar from '@/components/marketing/AnnouncementBar'
-import Footer from '@/components/marketing/Footer'
 import Navbar from '@/components/marketing/Navbar'
-import MarketingHome from './(marketing)/page'
+import Footer from '@/components/marketing/Footer'
 
-export default function HomePage() {
+export default function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-white">
       <AnnouncementBar />
       <div className="pt-9">
         <Navbar />
       </div>
-      <MarketingHome />
+      {children}
       <Footer />
     </div>
   )
