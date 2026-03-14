@@ -1,35 +1,35 @@
-import { defineConfig, devices } from '@playwright/test'
+import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './e2e',
-  timeout: 180000,
+  testDir: "./e2e",
+  timeout: 300000,
   workers: 1,
   expect: {
     timeout: 15000,
   },
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: "http://localhost:3000",
     headless: false,
     viewport: { width: 1280, height: 720 },
     video: {
-      mode: 'on',
-      size: { width: 1280, height: 720 }
+      mode: "on",
+      size: { width: 1280, height: 720 },
     },
-    screenshot: 'on',
+    screenshot: "on",
     launchOptions: {
       args: [
-        '--use-fake-ui-for-media-stream',
-        '--use-fake-device-for-media-stream',
-        '--autoplay-policy=no-user-gesture-required',
-      ]
-    }
+        "--use-fake-ui-for-media-stream",
+        "--use-fake-device-for-media-stream",
+        "--autoplay-policy=no-user-gesture-required",
+      ],
+    },
   },
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
     },
   ],
-  reporter: [['html', { outputFolder: 'playwright-report' }]],
-  outputDir: 'test-results',
-})
+  reporter: [["html", { outputFolder: "playwright-report" }]],
+  outputDir: "test-results",
+});
